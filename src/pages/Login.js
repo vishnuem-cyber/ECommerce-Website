@@ -1,7 +1,7 @@
 // FILE: src/pages/Login.js
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useAuth } from "../context/AuthContext"; 
 import "../styles/Login.css";
@@ -44,6 +44,9 @@ function Login() {
           required
         />
         <button type="submit">Login</button>
+        <p className="form-footer">
+          Don't have an account? <Link to="/signup">Sign up here</Link>
+        </p>
       </form>
     </div>
   );
