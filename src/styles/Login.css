@@ -25,14 +25,39 @@
     margin-bottom: 20px;
     color: #333;
 }
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
   
 .login-form input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-form input.error {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    text-align: left;
 }
 
 .login-form .form-footer {
@@ -62,12 +87,17 @@
     transition: 0.3s;
     margin-top: 10px;
 }
+
+.login-form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
   
 .login-form button.success {
     background-color: #28a745;
 }
   
-.login-form button:hover {
+.login-form button:hover:not(:disabled) {
     background-color: #0056b3;
 }
   
