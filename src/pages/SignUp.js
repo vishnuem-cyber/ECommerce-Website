@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import { useAuth } from "../context/AuthContext";
 import "../styles/Login.css"; // Reusing the same styles
 
+
+
 function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,6 +20,8 @@ function SignUp() {
 
   const validateForm = () => {
     const newErrors = {};
+
+
     
     // Name validation
     if (!formData.name.trim()) {
@@ -172,3 +176,4 @@ function SignUp() {
 }
 
 export default SignUp; 
+

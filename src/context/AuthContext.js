@@ -35,6 +35,13 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = (email, password) => {
+    // Check for test credentials
+    if (email === "test11@gmail.com" && password === "pass123") {
+      setIsLoggedIn(true);
+      localStorage.setItem("isLoggedIn", "true");
+      return true;
+    }
+    
     // Check against registered users
     const user = users.find(u => u.email === email && u.password === password);
     if (user) {
